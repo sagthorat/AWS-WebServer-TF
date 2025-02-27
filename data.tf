@@ -12,6 +12,6 @@ data "aws_ami" "this" {
 }
 
 data "aws_vpc" "this" {
-  default = true
+  default    = true
   cidr_block = "172.31.0.0/16"
 }
