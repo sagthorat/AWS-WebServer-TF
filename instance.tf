@@ -3,7 +3,7 @@ resource "aws_instance" "webserver" {
   instance_type = "t2.medium"
   user_data     = filebase64("scripts/userdata.sh")
   vpc_security_group_ids = [
-    aws_security_group.allow_http.id
+    aws_security_group.allow_http_ssh.id
   ]
   tags = {
     Name = "WebServer001"
