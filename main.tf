@@ -1,5 +1,5 @@
 resource "aws_instance" "web" {
-  ami           = data.aws_ami.this
+  ami           = data.aws_ami.this.id
   instance_type = "t3.micro"
 
   tags = {
