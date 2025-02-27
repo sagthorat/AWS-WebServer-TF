@@ -1,16 +1,12 @@
-data "aws_ami" "linux" {
+data "aws_ami" "this" {
   most_recent = true
-
+  owners      = ["amazon"]
+  filter {
+    name   = "architecture"
+    values = ["x86_64"]
+  }
   filter {
     name   = "name"
-    values = ["Amazon Linux 2023 AMI*"]
+    values = ["al2023-ami-2023*"]
   }
-
-  filter {
-    name   = "virtualization-type"
-    values = ["hvm"]
-  }
-
-  owners = ["amazon"] # Canonical
-  
 }
