@@ -5,7 +5,7 @@ resource "aws_instance" "webserver" {
   lifecycle {
     replace_triggered_by = [
 
-      aws_instance.webserver.tags["Name"]
+      aws_instance.webserver.id
 
     ]
   }
