@@ -10,3 +10,8 @@ data "aws_ami" "this" {
     values = ["al2023-ami-2023*"]
   }
 }
+
+data "aws_vpc" "this" {
+  default    = true
+  cidr_block = "172.31.0.0/16"
+}
