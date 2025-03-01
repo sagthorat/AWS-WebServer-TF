@@ -11,7 +11,11 @@ data "aws_ami" "this" {
   }
 }
 
-data "aws_vpc" "this" {
-  default    = true
-  cidr_block = "172.31.0.0/16"
+data "aws_availability_zones" "available" {
+  state = "available"
 }
+
+# data "aws_vpc" "this" {
+#   default    = true
+#   cidr_block = "172.31.0.0/16"
+# }

@@ -1,3 +1,4 @@
-output "public-ip" {
-  value = aws_instance.webserver.public_ip
+output "web_url" {
+  value = module.alb.dns_name
 }
+
